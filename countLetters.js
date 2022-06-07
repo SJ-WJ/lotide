@@ -1,17 +1,4 @@
-//Assertion Function
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${[actual]} === ${[expected]}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${[actual]} !== ${[expected]}`);
-  }
-};
-
-
-
-//step0. Input a string array (a sentence) then output the letters present and the amount of times they exist within the sentence (goal)
-//step1. We want to take into account each letter in the sentence so scan the array
-//step2.
+const assertEqual = require('./assertEqual');
 
 const countLetter = function(string) {
   const lettersAmount = {};
@@ -31,10 +18,10 @@ const countLetter = function(string) {
   } return lettersAmount;
 };
 
-
+module.exports = countLetter;
 
 //Test Code
-const test1 = countLetter("When is this assignment due");
-console.log(test1);
-const test2 = countLetter("It is due Monday");
-console.log(test2);
+// const test1 = countLetter("When is this assignment due");
+// console.log(test1);
+// const test2 = countLetter("It is due Monday");
+// console.log(test2);
