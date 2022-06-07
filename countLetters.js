@@ -19,9 +19,3 @@ const countLetter = function(string) {
 };
 
 module.exports = countLetter;
-
-//Test Code
-// const test1 = countLetter("When is this assignment due");
-// console.log(test1);
-// const test2 = countLetter("It is due Monday");
-// console.log(test2);
