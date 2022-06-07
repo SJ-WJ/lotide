@@ -14,20 +14,6 @@ const map = require('./map');
 const takeUntil = require('./takeUntil');
 const findKey = require('./findKey');
 
-module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  eqArrays: eqArrays,
-  without: without,
-  countLetter: countLetter,
-  countOnly: countOnly,
-  eqObjects: eqObjects,
-  letterPositions: letterPositions,
-  map: map,
-  takeUntil: takeUntil,
-  findKey: findKey
 
-};
+module.exports = {head, tail, middle, assertArraysEqual, assertEqual, eqArrays, without,
+countLetter, countOnly, eqObjects, letterPositions, map, takeUntil, findKey};
