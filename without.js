@@ -1,33 +1,5 @@
-const eqArrays = function(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual,expected) {
-  let arrayCompare = eqArrays(actual, expected);
-  if (arrayCompare === true) {
-    console.log(`✅✅✅ Assertion Passed: ${[actual]} === ${[expected]}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${[actual]} !== ${[expected]}`);
-  }
-};
-
-//step0. get rid of the elements of the second from the first array (goal)
-//step1. to compare two arrays
-//step1.1 creat empty array to store values and returned at the end
-//step2. loop the first array
-//step3. see if the first value of the second array exists from the first array
-//step4. if match skip, if not match
-//step5. create a checker to see if there is no match
-//step6. loop second array
-//step7. if there is a mismatch update checker
-//step8. look up checker to see a mismatch
-//step9. if mismatch update value in empty array
-// final step return array of values
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const without = (array1, array2) => {
   const emptyArray = [];
@@ -50,6 +22,8 @@ const without = (array1, array2) => {
   return emptyArray;
 };
 
+module.exports = without;
+
 // Test Code
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
